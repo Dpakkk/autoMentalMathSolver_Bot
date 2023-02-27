@@ -22,6 +22,7 @@ question_element = browser.find_element(By.CLASS_NAME,"problem")
 
 
 while True:
+    # regular expressin to generalize the mathematical expression
     question = re.sub(r'[÷×+\-\u2013]', lambda m: {'÷': '/', '×': '*', '+': '+', '\u2013': '-', '-': '-'}[m.group(0)], question_element.text)
     answer = str(int(eval(question)))
     pyautogui.write(answer)
