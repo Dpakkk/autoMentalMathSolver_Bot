@@ -26,9 +26,3 @@ while True:
     answer = str(int(eval(question)))
     pyautogui.write(answer)
     sleep(0.5)
-
-
-#import re
-
-# Replace Unicode arithmetic symbols with standard equivalents
-
